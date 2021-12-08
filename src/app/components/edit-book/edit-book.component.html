@@ -1,0 +1,11 @@
+<div class="container">
+    <form [formGroup]="formulario" (submit)="handleEdit()">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input formControlName="title" type="input" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Enter title">
+          <div *ngIf="formulario.controls.title.invalid && formulario.controls.title.touched">Title is required</div>
+         </div>
+       
+        <button type="submit" [disabled]="formulario.invalid" class="btn btn-primary m-1">Submit</button>
+      </form>
+    </div>
